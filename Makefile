@@ -9,3 +9,7 @@ verbose:
 .PHONY: version
 version:
 	go run . version
+
+.PHONY: version_short
+version_short:
+	go run . version -s
