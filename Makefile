@@ -13,3 +13,8 @@ version:
 .PHONY: version_short
 version_short:
 	go run . version -s
+
+
+.PHONY: hello
+hello:
+	go run . hello World
