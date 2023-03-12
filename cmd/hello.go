@@ -17,7 +17,13 @@ var helloCmd = &cobra.Command{
 		return nil
 	},
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("Hello, %s!\n", args[0])
+		msg := fmt.Sprintf("Hello, %s", args[0])
+
+		if Verbose {
+			msg += "!"
+		}
+
+		fmt.Println(msg)
 	},
 }
 
