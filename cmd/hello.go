@@ -8,6 +8,9 @@ import (
 
 var helloCmd = &cobra.Command{
 	Use: "hello",
+	SuggestFor: []string{
+		"hi",
+	},
 	//Args: cobra.MinimumNArgs(1),
 	Args: func(cmd *cobra.Command, args []string) error {
 		if len(args) < 1 {
