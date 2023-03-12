@@ -21,5 +21,5 @@ var versionCmd = &cobra.Command{
 
 func init() {
 	versionCmd.Flags().BoolVarP(&short, "short", "s", false, "print short version")
-	rootCmd.AddCommand(versionCmd)
+	RootCmd.AddCommand(versionCmd)
 }

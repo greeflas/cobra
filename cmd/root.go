@@ -9,7 +9,7 @@ import (
 
 var Verbose bool
 
-var rootCmd = &cobra.Command{
+var RootCmd = &cobra.Command{
 	Use:     "demo",
 	Short:   "This is demo cobra app",
 	Long:    "This is demo Cobra application for learning purpose",
@@ -20,11 +20,11 @@ var rootCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.PersistentFlags().BoolVarP(&Verbose, "verbose", "v", false, "verbose output")
+	RootCmd.PersistentFlags().BoolVarP(&Verbose, "verbose", "v", false, "verbose output")
 }
 
 func Execute() {
-	if err := rootCmd.Execute(); err != nil {
+	if err := RootCmd.Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
