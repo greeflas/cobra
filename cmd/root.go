@@ -9,9 +9,10 @@ import (
 var Verbose bool
 
 var rootCmd = &cobra.Command{
-	Use:   "demo",
-	Short: "This is demo cobra app",
-	Long:  "This is demo Cobra application for learning purpose",
+	Use:     "demo",
+	Short:   "This is demo cobra app",
+	Long:    "This is demo Cobra application for learning purpose",
+	Version: "v1.0.0",
 }
 
 func init() {

@@ -6,6 +6,10 @@ run:
 version:
 	go run . version
 
+.PHONY: version_flag
+version_flag:
+	go run . --version
+
 .PHONY: version_short
 version_short:
 	go run . version -s
