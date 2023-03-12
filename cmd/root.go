@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/spf13/cobra"
 	"os"
+	"time"
 )
 
 var Verbose bool
@@ -13,6 +14,9 @@ var rootCmd = &cobra.Command{
 	Short:   "This is demo cobra app",
 	Long:    "This is demo Cobra application for learning purpose",
 	Version: "v1.0.0",
+	PersistentPreRun: func(cmd *cobra.Command, args []string) {
+		fmt.Printf("[%s] ", time.Now().Format("2006-01-02 03:04:05"))
+	},
 }
 
 func init() {
